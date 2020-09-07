@@ -1,0 +1,11 @@
+<h1> Update Appointment </h1>
+
+<%= form_for @appointment do |f| %>
+  <%= f.label :date%>
+  <%= f.text_area :date %> <br/><br/>
+  <%= f.label :time%>
+  <%= f.text_area :time %> <br/><br/>
+  <%= f.label :therapist_id, "Therapist" %>
+  <%= f.collection_select :therapist_id, @therapists, :id, :name %> <br/><br/>
+  <%= f.submit "Update" %>
+<% end %>

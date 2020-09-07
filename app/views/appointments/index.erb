@@ -1,0 +1,15 @@
+<h1>Here are all your appointments</h1>
+
+<% if @appointments == [] %>
+    <p><%= "You have no appointments." %></p>
+<% end %>
+
+<%= link_to "New Appointment", new_appointment_path %>
+
+<ul>
+    <% @appointments.each do |appointment| %>
+        <li>
+        <%= link_to appointment.date, appointment_path(appointment.id) %>
+        </li>
+    <% end %>
+</ul>

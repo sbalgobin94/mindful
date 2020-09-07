@@ -1,0 +1,11 @@
+<h1>Here are all your journal entries</h1>
+
+<h2> <%= link_to "New Journal Entry", new_journal_path %>
+
+<ul>
+    <% @journals.each do |journal| %>
+        <li>
+            <%= link_to journal.date, journal_path(journal) %>
+        </li>
+    <% end %>
+</ul>

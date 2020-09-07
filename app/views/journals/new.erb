@@ -1,0 +1,9 @@
+<h1> New Entry</h1>
+
+<%= form_for @journal do |f| %>
+    <%= f.label :date%>
+    <%= f.text_area :date %> <br/><br/>
+    <%= f.label :content%>
+    <%= f.text_area :content %> <br/><br/>
+    <%= f.submit "Submit" %>
+  <% end %>
