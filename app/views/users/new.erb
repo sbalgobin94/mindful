@@ -1,8 +1,10 @@
 
 <div class="container">
+<div class="card-transparent"
 <div class="card border-0 shadow my-1">
   <div class="card-body p-1">
-    <h1 class="font-weight-light"><center>Register</center></h1>
+  <center>
+    <h1 class="font-weight-light">Register</h1>
       <% if @errors %>
         <% @errors.each do |error|%>
         <p style= "color: red"> <%= error %></p>
@@ -10,6 +12,7 @@
       <% end %>
 
       <%= form_for @user do |f| %>
+        <strong>
         <div class="form-group">
         <%= label_tag :name %>
         <%= text_field_tag :name %>
@@ -21,9 +24,11 @@
     <div class="form-group">
     <%= label_tag :password %>
     <%= password_field_tag :password %>
-</div>
+</div></strong>
     <%= submit_tag "Submit", class: 'btn    btn-success' %>
       <% end %>
+      </center>
+      </div>
     </div>
   </div>
 </div>
