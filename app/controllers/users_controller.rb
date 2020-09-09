@@ -14,10 +14,33 @@ class UsersController < ApplicationController
         if @user && @user.authenticate(params[:password])
           # If the student is found AND their password matches
           session[:user_id] = @user.id
-          redirect_to user_path(@user)
+          redirect_to profile_path
         else
           flash[:error] = "Incorrect username or password"
           redirect_to login_path
         end
       end
+
+      def logout
+        session[:student_id] = nil
+        redirect_to login_path
+      end
+
+      def profile
+        render :profile
+      end
+
+      def new
+        @user = User.new
+      end
+
+      def create
+        user_params = params.require(:user).permit(:name, :username, :password)
+        @user = User.create(user_params)
+        session[:user_id] = @user.id
+        redirect_to login_path
+      end
+
+
+
 end

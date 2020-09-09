@@ -3,7 +3,7 @@
 
 
 <% if @error %>
-    <p><%= @error %></p>
+    <p style= "color :red"> <%= @error %></p>
 <% end %>
 
 
@@ -13,4 +13,8 @@
     <%= label_tag :password %>
     <%= password_field_tag :password %>
     <%= submit_tag "Login!" %>
-<% end %>
+<% end %> 
+
+<br></br>
+
+<%= button_to "No account? Register!", "/users/new" %>

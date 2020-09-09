@@ -9,7 +9,6 @@ class AppointmentsController < ApplicationController
     end
 
     def create
-        byebug
         @appointment = @current_user.appointments.create(appointment_params)
         redirect_to appointments_path
     end

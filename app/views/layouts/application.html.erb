@@ -10,6 +10,18 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
+
+  <% if @current_user != nil %>
+    <nav>
+      <%= @current_user.username %> 
+
+      <%= button_to "LOG OUT", logout_path, method: :delete %>
+      </nav>
+  <% end %>
+
+  <%= yield %>
+</body>
+
+
+
 </html>
