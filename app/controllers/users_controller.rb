@@ -36,6 +36,7 @@ class UsersController < ApplicationController
       end
 
       def create
+        byebug
         user_params = params.require(:user).permit(:name, :username, :password)
         @user = User.create(user_params)
 
