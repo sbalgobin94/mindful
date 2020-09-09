@@ -1,5 +1,7 @@
-<h1> <%= @current_user.name %></h1>
-
-<h2> <%= link_to "Appointments", appointments_path %> </h2>
-<h2> <%= link_to "Goals", goals_path %> </h2>
-<h2> <%= link_to "Journal", journals_path %> </h2>
+<center><div class="btn-group-vertical">
+<%= link_to "Appointments", appointments_path, :class => "btn btn-secondary btn-lg" %>
+<%= link_to "Goals", goals_path, :class => "btn btn-secondary btn-lg" %>
+<%= link_to "Journal", journals_path, :class => "btn btn-secondary btn-lg" %>
+  
+</div>
+</center>
