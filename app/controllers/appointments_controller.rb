@@ -6,6 +6,7 @@ class AppointmentsController < ApplicationController
     def new
         @appointment = Appointment.new
         @therapists = Therapist.all
+        @apptimes = Apptime.all
     end
 
     def create
@@ -22,6 +23,7 @@ class AppointmentsController < ApplicationController
 
     def edit
         @therapists = Therapist.all
+        @apptimes = Apptime.all
     end
 
     def update
@@ -42,7 +44,7 @@ class AppointmentsController < ApplicationController
     end
 
     def appointment_params
-        appointment_params = params.require(:appointment).permit(:user_id, :therapist_id, :date, :time)
+        appointment_params = params.require(:appointment).permit(:user_id, :therapist_id, :date, :apptime_id)
     end
 
 

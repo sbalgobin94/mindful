@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     end
 
     def login
-        @error = flash[:error]
+      @error = flash[:error]
     end
 
     def handle_login
@@ -31,15 +31,22 @@ class UsersController < ApplicationController
       end
 
       def new
+        @errors = flash[:errors]
         @user = User.new
       end
 
       def create
         user_params = params.require(:user).permit(:name, :username, :password)
         @user = User.create(user_params)
-        session[:user_id] = @user.id
-        redirect_to login_path
+
+        if @user.valid?
+          session[:user_id] = @user.id
+          redirect_to login_path
+        else
+          flash[:errors] = @user.errors.full_messages
+          redirect_to new_user_path
       end
+    end
 
 
 

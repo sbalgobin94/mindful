@@ -1,4 +1,4 @@
-<h3> <%= "You have an appointment with #{@appointment.therapist.name} on #{@appointment.date} at #{@appointment.time}." %> </h3> 
+<h3> <%= "You have an appointment with #{@appointment.therapist.name} on #{@appointment.date} at #{@appointment.apptime.time}." %> </h3> 
 
 <%= button_to "Update Appointment", {:controller => "appointments", :action => "edit", :user_id => session[:user_id]}, :method => :post %><br/><br/>
 <%= button_to "Cancel Appointment", @appointment, :method => :delete %>

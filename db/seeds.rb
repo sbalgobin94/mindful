@@ -11,6 +11,7 @@ Therapist.destroy_all
 Appointment.destroy_all
 Goal.destroy_all
 Journal.destroy_all
+Apptime.destroy_all
 
 sam = User.create(name: "Samantha Balgobin", username: "sbalgobin94", password: "abc123")
 josh = User.create(name: "Joshua Itwaru", username: "jitwaru", password: "abc123")
@@ -25,7 +26,22 @@ goal_two = Goal.create(content: "Excercise more", user_id: josh.id)
 john = Therapist.create(name: "John Doe", title: "PhD", specialty: "Cognitive Behavioral Therapy")
 jane = Therapist.create(name: "Jane Doe", title: "PhD", specialty: "Talk Therapy")
 
-appointment_one = Appointment.create(date: "2020-10-20", time: "12:30 PM", user_id: sam.id, therapist_id: john.id)
-appointment_two = Appointment.create(date: "2020-10-30", time: "2:30 PM", user_id: josh.id, therapist_id: jane.id)
+time1 = Apptime.create(time: "8:00 AM")
+time2 = Apptime.create(time: "9:00 AM")
+time3 = Apptime.create(time: "10:00 AM")
+time4 = Apptime.create(time: "11:00 AM")
+time5 = Apptime.create(time: "12:00 PM")
+time6 = Apptime.create(time: "1:00 PM")
+time7 = Apptime.create(time: "2:00 PM")
+time8 = Apptime.create(time: "3:00 PM")
+time9 = Apptime.create(time: "4:00 PM")
+time10 = Apptime.create(time: "5:00 PM")
+time11 = Apptime.create(time: "6:00 PM")
+time12 = Apptime.create(time: "7:00 PM")
+
+appointment_one = Appointment.create(date: "2020-10-20", user_id: sam.id, therapist_id: john.id, apptime_id: time1.id)
+appointment_two = Appointment.create(date: "2020-10-30", user_id: josh.id, therapist_id: jane.id, apptime_id: time1.id)
+
+
 
 puts "Done seeding!!!!"

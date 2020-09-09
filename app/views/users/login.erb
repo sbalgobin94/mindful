@@ -3,9 +3,8 @@
 
 
 <% if @error %>
-    <p style= "color :red"> <%= @error %></p>
-<% end %>
-
+    <p style= "color: red"> <%= @error %></p>
+  <% end %>
 
 <%= form_tag "/handle_login" do %>
     <%= label_tag :username %>

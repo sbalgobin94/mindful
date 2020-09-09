@@ -3,8 +3,8 @@
 <%= form_for @appointment do |f| %>
     <%= f.label :date%>
     <%= f.text_area :date %> <br/><br/>
-    <%= f.label :time%>
-    <%= f.text_area :time %> <br/><br/>
+    <%= f.label :apptime_id, "Time"%>
+    <%= f.collection_select :apptime_id, @apptimes, :id, :time %> <br/><br/>
     <%= f.label :therapist_id, "Therapist" %>
     <%= f.collection_select :therapist_id, @therapists, :id, :name %> <br/><br/>
     <%= f.submit "Submit" %>
