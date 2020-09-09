@@ -5,7 +5,7 @@
 <ul>
     <% @goals.each do |goal| %>
         <li>
-            <%= link_to goal.content, goal_path(goal) %>
+            <%= link_to "#{goal.content} | #{goal.status}", goal_path(goal) %>
         </li>
     <% end %>
 </ul>

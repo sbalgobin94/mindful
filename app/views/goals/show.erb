@@ -1,4 +1,4 @@
 <h3> <%= @goal.content %> </h3> 
 
-<%= link_to "Update Status", edit_goal_path(@goal) %><br/><br/>
+<%= button_to "Update Status", edit_goal_path(@goal) %><br/><br/>
 <%= button_to "Remove Goal", @goal, :method => :delete %>

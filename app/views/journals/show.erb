@@ -1,4 +1,5 @@
 <h3> <%= @journal.content %> </h3>
 
+<%= button_to "Edit entry", {:controller => "journals", :action => "edit", :user_id => session[:user_id]}, :method => :post %><br/><br/>
 <%= button_to "Delete entry", @journal, :method => :delete %>
 

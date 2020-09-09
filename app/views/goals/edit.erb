@@ -1,0 +1,7 @@
+<h1> Update Status</h1>
+
+<%= form_for @goal do |f| %>
+  <%= f.label :goal_status, "Completed" %>
+  <%= f.check_box :goal_status %> <br/><br/>
+  <%= f.submit "Update" %>
+<% end %>
