@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # get '/users/:id', to: 'user#show', as: "user"
   resources :journals, only: [:new, :create, :show, :destroy, :index]
   resources :goals
+  resources :therapists, only: [:index, :show]
 
   get "/login", to: "users#login", as: "login"
   post "/handle_login", to: "users#handle_login"

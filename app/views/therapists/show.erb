@@ -1,0 +1,13 @@
+<div class="card bg-white mb-3">
+    <div class="card-body">
+        <h1 class="card-title"><%= @therapist.name %></h1>
+        <strong><p class="card-subtitle"><%=@therapist.title %></em></p></strong>
+        <img style="height: 30rem; width: 25rem;" class="card-img mx-auto d-block mb-3" alt="..." src=<%= @therapist.image_url %> >
+        <strong><p class="card-description"><%= "Specialty: #{@therapist.specialty}" %></p></strong>
+        <p class="card-text"><%= @therapist.description %>
+        </p>
+        <p>
+            <center><%= link_to 'Make an Appointment', new_appointment_path, :class => "btn-primary btn-md" %></center>
+        </p>
+    </div>
+</div>
