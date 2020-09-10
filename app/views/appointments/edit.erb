@@ -10,7 +10,7 @@
 <%= form_for @appointment do |f| %>
   <strong>
   <%= f.label :date%>
-  <%= f.text_area :date %> <br/><br/>
+  <%= f.date_select :date %> <br/><br/>
   <%= f.label :apptime_id, "Time"%>
   <%= f.collection_select :apptime_id, @apptimes, :id, :time %> <br/><br/>
   <%= f.label :therapist_id, "Therapist" %>
