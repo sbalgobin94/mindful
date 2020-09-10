@@ -4,8 +4,9 @@
 ## How to Install
 1. Clone the repo onto your local machine.
 1. Navigate to the repo directory from your terminal.
+1. Run `rails db:create` to create the database.
 1. Run `bundle install` to install the required gems.
-1. Run `rails db:migrate` to create the database.
+1. Run `rails db:migrate` to create the migrations.
 1. Run `rails db:seed` to populate the database.
 1. Run `rails s` to start the server.
 1. Go to `localhost:3000/login` in your browser.
