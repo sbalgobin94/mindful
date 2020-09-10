@@ -1,5 +1,16 @@
-<h3> <%= @journal.content %> </h3>
-
-<%= button_to "Edit entry", {:controller => "journals", :action => "edit", :user_id => session[:user_id]}, :method => :post %><br/><br/>
-<%= button_to "Delete entry", @journal, :method => :delete %>
-
+<br></br>
+<center>
+<div class="card bg-white mb-3">
+    <div class="card-body">
+        <h5 class="card-title"><%= @journal.date %></h5>
+        <p class="card-text">
+        <%= @journal.content %>
+        </p>
+        <p>
+        <%= button_to "Edit entry", {:controller => "journals", :action => "edit", :user_id => session[:user_id]}, :method => :post, :class => "btn-primary btn-sm"  %>
+        <br></br>
+        <%= button_to "Delete entry", @journal, :method => :delete, :class => "btn-primary btn-sm" %>
+        </p>
+    </div>
+</div>
+</center>

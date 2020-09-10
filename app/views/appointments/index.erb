@@ -1,15 +1,20 @@
-<h1>Here are all your appointments</h1>
 
-<% if @appointments == [] %>
-    <p><%= "You have no appointments." %></p>
+<center><% if @appointments == [] %>
+    <br></br>
+    <strong><p><%= "You have no appointments." %></p></strong>
 <% end %>
+</center>
+<center><%= link_to "New Appointment", new_appointment_path, :class => "btn btn-primary btn-lg" %></center>
+<br></br>
 
-<%= link_to "New Appointment", new_appointment_path %>
+<center>
+<div class="btn-group-vertical">
 
-<ul>
     <% @appointments.each do |appointment| %>
-        <li>
-        <%= link_to appointment.date, appointment_path(appointment.id) %>
-        </li>
+        <%= link_to appointment.date, appointment_path(appointment.id), :class => "btn btn-secondary btn-lg" %>
     <% end %>
-</ul>
+
+</div>
+</center>
+
+

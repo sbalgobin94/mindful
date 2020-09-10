@@ -13,7 +13,7 @@ class JournalsController < ApplicationController
 
     def create
         @journal = @current_user.journals.create(journal_params)
-        redirect_to journal_path(@journal)
+        redirect_to journals_path
     end
 
     def destroy

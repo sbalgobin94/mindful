@@ -1,11 +1,18 @@
-<h1>Here are all your journal entries</h1>
+<br></br>
+<center><h2> <%= link_to "New Journal Entry", new_journal_path, :class => "btn btn-primary btn-lg" %></center>
 
-<h2> <%= link_to "New Journal Entry", new_journal_path %>
+<br></br>
 
-<ul>
+<div class="row">
     <% @journals.each do |journal| %>
-        <li>
-            <%= link_to journal.date, journal_path(journal) %>
-        </li>
+        <section class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card mb-4" style="width: 16rem; height: 10rem">
+                <div class="card-body">
+                    <h5 class="card-title"><%= journal.date %></h5>
+                    <p class="card-text "><%= journal.content[0...90] %>...</p>
+                    <%= link_to "view more", journal_path(journal), :class => "btn btn-secondary btn-sm"%>
+                </div>
+            </div>
+        </section>
     <% end %>
-</ul>
+</div>

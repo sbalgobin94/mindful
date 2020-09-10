@@ -4,8 +4,8 @@
 <div class="card border-0 shadow my-1">
   <div class="card-body p-1">
   <center>
-    <h1 class="font-weight-light">Login</h1>
-    <br></br>
+    <h1 class="font-weight-light"></h1>
+    
     <% if @error %>
     <p style= "color: red"> <%= @error %></p>
   <% end %>
@@ -22,7 +22,6 @@
     </div></strong>
         <%= submit_tag "Login!", class: 'btn    btn-success' %>
         <% end %> 
-        <br></br>
         <%= button_to "No account? Register!", "/users/new" %>
     </div>
     </div>

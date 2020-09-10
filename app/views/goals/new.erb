@@ -1,7 +1,19 @@
-<h1> New Goal</h1>
+
+  <center><div class="container">
+<div class="card-transparent"
+<div class="card border-0 shadow my-1">
+  <div class="card-body p-1">
+    <h1 class="font-weight-light">New Goal</h1>
 
 <%= form_for @goal do |f| %>
-    <%= f.label :content %>
-    <%= f.text_area :content %> <br/><br/>
-    <%= f.submit "Let's do this!" %>
-  <% end %>
+  <strong>
+  <%= f.label :content %>
+  <%= f.text_area :content %> <br/>
+  </strong>
+  <%= f.submit "Let's do this!", class: 'btn btn-success' %>
+<% end %>
+</div>
+   </div>
+  </div>
+</div>
+</center>

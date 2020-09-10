@@ -1,11 +1,24 @@
-<h1> New Appointment</h1>
+<center> <div class="container">
+<div class="card-transparent"
+<div class="card border-0 shadow my-1">
+  <div class="card-body p-1">
+    <h1 class="font-weight-light">New Appointment</h1>
+   
+
 
 <%= form_for @appointment do |f| %>
-    <%= f.label :date%>
-    <%= f.text_area :date %> <br/><br/>
-    <%= f.label :apptime_id, "Time"%>
-    <%= f.collection_select :apptime_id, @apptimes, :id, :time %> <br/><br/>
-    <%= f.label :therapist_id, "Therapist" %>
-    <%= f.collection_select :therapist_id, @therapists, :id, :name %> <br/><br/>
-    <%= f.submit "Submit" %>
-  <% end %>
+  <strong>
+  <%= f.label :date%>
+  <%= f.text_area :date %> <br/><br/>
+  <%= f.label :apptime_id, "Time"%>
+  <%= f.collection_select :apptime_id, @apptimes, :id, :time %> <br/><br/>
+  <%= f.label :therapist_id, "Therapist" %>
+  <%= f.collection_select :therapist_id, @therapists, :id, :name %> <br/><br/>
+  </strong>
+  <%= f.submit "Submit", class: 'btn btn-success' %>
+<% end %>
+</div>
+    </div>
+  </div>
+</div>
+</center>

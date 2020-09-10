@@ -1,7 +1,18 @@
-<h1> Edit Entry</h1>
 
+  <center> <div class="container">
+<div class="card-transparent"
+<div class="card border-0 shadow my-1">
+  <div class="card-body p-1">
+    <h1 class="font-weight-light">Edit Entry</h1>
+   
 <%= form_for @journal do |f| %>
-    <%= f.label :content%>
-    <%= f.text_area :content %> <br/><br/>
-    <%= f.submit "Submit" %>
-  <% end %>
+  <strong>
+  <%= f.label :content%>
+  <%= f.text_area :content %> <br/><br/>
+  <%= f.submit "Update", class: 'btn btn-success' %>
+<% end %>
+</div>
+    </div>
+  </div>
+</div>
+</center>

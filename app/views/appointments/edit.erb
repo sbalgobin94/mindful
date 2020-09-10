@@ -1,11 +1,25 @@
-<h1> Update Appointment </h1>
+<center> <div class="container">
+<div class="card-transparent"
+<div class="card border-0 shadow my-1">
+  <div class="card-body p-1">
+  <br></br>
+    <h1 class="font-weight-light">Update Appointment</h1>
+   
+
 
 <%= form_for @appointment do |f| %>
+  <strong>
   <%= f.label :date%>
   <%= f.text_area :date %> <br/><br/>
   <%= f.label :apptime_id, "Time"%>
   <%= f.collection_select :apptime_id, @apptimes, :id, :time %> <br/><br/>
   <%= f.label :therapist_id, "Therapist" %>
   <%= f.collection_select :therapist_id, @therapists, :id, :name %> <br/><br/>
-  <%= f.submit "Update" %>
+  </strong>
+  <%= f.submit "Update", class: 'btn btn-success' %>
 <% end %>
+</div>
+    </div>
+  </div>
+</div>
+</center>

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   # get '/users/:id', to: 'user#show', as: "user"
-  resources :journals, only: [:new, :show,:destroy, :index, :show]
+  resources :journals, only: [:new, :create, :show, :destroy, :index]
   resources :goals
 
   get "/login", to: "users#login", as: "login"
@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   patch '/appointments/:id', to: 'appointments#update'
 
   get '/profile', to: 'users#profile', as: 'profile'
+  post '/profile', to: 'users#profile'
 
   get '/users/new', to: 'users#new', as: 'new_user'
   post '/users', to: 'users#create'

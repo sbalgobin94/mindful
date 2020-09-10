@@ -1,7 +1,21 @@
-<h1> Update Status</h1>
+<center> <div class="container">
+<div class="card-transparent"
+<div class="card border-0 shadow my-1">
+  <div class="card-body p-1">
+  <br></br>
+    <h1 class="font-weight-light">Update Status</h1>
+   
+
 
 <%= form_for @goal do |f| %>
+  <strong>
   <%= f.label :goal_status, "Completed" %>
   <%= f.check_box :goal_status %> <br/><br/>
-  <%= f.submit "Update" %>
+  </strong>
+  <%= f.submit "Update", class: 'btn btn-success' %>
 <% end %>
+</div>
+    </div>
+  </div>
+</div>
+</center>

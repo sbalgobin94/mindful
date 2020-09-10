@@ -1,4 +1,12 @@
-<h3> <%= @goal.content %> </h3> 
-
-<%= button_to "Update Status", edit_goal_path(@goal) %><br/><br/>
-<%= button_to "Remove Goal", @goal, :method => :delete %>
+<br></br>
+<center>
+<div class="card bg-white mb-3">
+    <div class="card-body">
+        <h5 class="card-title"><%= @goal.content %></h5>
+        <p>
+        <%= button_to "Update Status", edit_goal_path(@goal), :class => "btn-primary btn-sm" %><br/><br/>
+        <%= button_to "Remove Goal", @goal, :method => :delete, :class => "btn-primary btn-sm" %>
+        </p>
+    </div>
+</div>
+</center>
