@@ -6,7 +6,7 @@
 <div class="row">
     <% @journals.each do |journal| %>
         <section class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card mb-4" style="width: 16rem; height: 10rem">
+            <div class="card mb-4" style="width: 16rem; height: 15rem">
                 <div class="card-body">
                     <h5 class="card-title"><%= journal.date %></h5>
                     <p class="card-text "><%= journal.content[0...90] %>...</p>

@@ -30,7 +30,7 @@ class JournalsController < ApplicationController
         @journal = Journal.find(params[:id])
         journal_params = params.require(:journal).permit(:content)
         @journal.update(journal_params)
-        redirect_to journal_path(@journal)
+        redirect_to journals_path
     end
 
 
